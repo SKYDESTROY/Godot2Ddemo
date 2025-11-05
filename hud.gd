@@ -3,7 +3,7 @@ extends CanvasLayer
 signal  startgame
 
 func showmessage(text):
-	$message.text = "text"
+	$message.text = text
 	$message.show()
 	$messagetimer.start()
 	

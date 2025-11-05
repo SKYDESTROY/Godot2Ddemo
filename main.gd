@@ -12,11 +12,13 @@ func gameover():
 	$HUD.gameover()
 	
 func newgame():	
+	get_tree().call_group("mobs", "queue_free")
 	score = 0
 	$player.start($playposition.position)
 	$starttimer.start()
 	$HUD.updatescore(score)
 	$HUD.showmessage("ready")
+	
 
 func _on_enemyspowntimer_timeout() :
 	var enemy : = enemyscene.instantiate()
